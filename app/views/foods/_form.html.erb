@@ -1,0 +1,16 @@
+<%= form_for @food do |f|%><br>
+<%=f.label :name%><br>
+<%=f.text_field :name%><br>
+<%=f.label :vegan%>:
+<%=f.label 'true'%>
+<%=f.radio_button :vegan, true%>
+<%=f.label 'false'%>
+<%=f.radio_button :vegan, false%><br>
+<%=f.label :protein%><br>
+<%=f.text_field :protein%><br>
+<%=f.label :description%><br>
+<%=f.text_area :description%><br>
+<%=f.label :price%><br>
+<%=f.number_field :price%><br>
+<%=f.submit%><br>
+<%end%>

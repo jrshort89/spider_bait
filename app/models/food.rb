@@ -5,5 +5,5 @@ class Food < ApplicationRecord
         self.franchise 
     end
 
-    def 
+    
 end
