@@ -1,7 +1,14 @@
 <%= form_for @franchise do |f| %>
+<% if @franchise.errors.any? %>
+    <% @franchise.errors.full_messages.each do |error| %>
+        <div><%= error %></div>
+    <% end %>
+<% end %><br>
 <%= f.label :name %><br>
 <%= f.text_field :name %><br>
 <%= f.label :costume %><br>
-<%= f.text_field :costume %><br><br>
-<%= f.submit %>
+<%= f.text_field :costume %><br>
+<%= f.label "Foods" %><br>
+<%= f.collection_check_boxes :food_ids, Food.all, :id, :name %><br><br>
+<%= f.submit%>
 <% end %>
