@@ -1,0 +1,7 @@
+<h1>Analytics Page</h1>
+
+<div> Total Franchises: <%= Franchise.all.count %><br>
+<div> Total Foods: <%= Food.all.count %><br>
+<div> Total Vegan Foods: <%= Food.where(vegan: true).count%><br>
+<div> If you'd like to try them all it'll cost: <%= Food.sum(:price) %><br>
+

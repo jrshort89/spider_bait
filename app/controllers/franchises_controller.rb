@@ -12,8 +12,13 @@ class FranchisesController < ApplicationController
   end
 
   def create
-    @franchise = Franchise.create(franchise_params)
-    redirect_to franchise_path(@franchise)
+    @franchise = Franchise.new(franchise_params)
+    if @franchise.valid?
+      @franchise.save
+      redirect_to franchise_path(@franchise)
+    else 
+      render new_franchise_path
+    end
   end
 
   private

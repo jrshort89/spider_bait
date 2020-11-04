@@ -1,9 +1,4 @@
 class Food < ApplicationRecord
-    belongs_to :franchise
-
-    def franchise_name=(name)
-        self.franchise 
-    end
-
-    
+    belongs_to :franchise, required: false
+    validates :name, presence: true
 end

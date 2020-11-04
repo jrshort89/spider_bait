@@ -13,7 +13,6 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.create(food_params)
-    byebug
     redirect_to food_path(@food)
   end
   private

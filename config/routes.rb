@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # post '/foods', to: 'foods#create'
   resources :franchises, only: [:index, :show, :new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/analytics', to: 'application#analytics', as: 'analytics'
 end
