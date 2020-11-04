@@ -12,12 +12,13 @@
   <body>
     <header>
     <h1>Into The Spider Eats</h1>
+    <div class="links">
     <%= link_to "Home", home_path %> | 
     <%= link_to "Franchises", franchises_path %> | 
     <%= link_to "New Franchises", new_franchise_path %> | 
     <%= link_to "Foods", foods_path %> | 
-    <%= link_to "New Foods", new_food_path %> | 
-
+    <%= link_to "New Foods", new_food_path %>
+    </div>
     </header>
     <%= yield %>
   </body>
