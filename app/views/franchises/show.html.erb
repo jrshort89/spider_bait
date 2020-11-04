@@ -1,3 +1,11 @@
 <h1>Franchises</h1>
 <h2>Name: <%= @franchise.name %><br>
 Spidey Costume: <%= @franchise.costume %></h2>
+<% @franchise.foods.each do |food| %>
+<%= food.name %><br>
+<%= food.vegan %><br>
+<%= food.protein %><br>
+<%= food.description %><br>
+<%= food.price %><br>
+--------------------<br>
+<% end %>

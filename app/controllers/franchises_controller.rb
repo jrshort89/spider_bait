@@ -13,17 +13,16 @@ class FranchisesController < ApplicationController
 
   def create
     @franchise = Franchise.new(franchise_params)
-    if @franchise.valid?
-      @franchise.save
+    if @franchise.save
       redirect_to franchise_path(@franchise)
-    else 
-      render new_franchise_path
+    else
+      render :new
     end
   end
 
   private
 
   def franchise_params
-    params.require(:franchise).permit(:name, :costume)
+    params.require(:franchise).permit(:name, :costume, :food_ids => [])
   end
 end

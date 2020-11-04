@@ -1,4 +1,4 @@
 class Franchise < ApplicationRecord
     has_many :foods
-    validates :name, presence: true
+    validates :name, :costume, presence: true
 end
